@@ -17,7 +17,7 @@ export default function MusicPlayer({ isPlaying, onToggle }) {
   return (
     <>
       <audio ref={audioRef} loop preload="auto">
-        <source src="/audio/wedding-play.mp3" type="audio/mpeg" />
+        <source src="/audio/wedding-music.mp3" type="audio/mpeg" />
       </audio>
 
       <button
