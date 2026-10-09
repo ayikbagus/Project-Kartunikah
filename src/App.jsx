@@ -49,19 +49,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-charcoal relative">
-      {/* Desktop Blurred Background (Cat Image) */}
-      <div className="fixed inset-0 z-0 hidden md:block overflow-hidden pointer-events-none">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/back.jpg')",
-            filter: "blur(12px) grayscale(100%) sepia(60%) brightness(0.4) contrast(1.1)",
-            transform: "scale(1.1)", // Mencegah pinggiran blur terlihat transparan
-          }}
-        />
-        {/* Overlay tambahan agar lebih menyatu dengan palet */}
-        <div className="absolute inset-0 bg-[#3a2f26]/30 mix-blend-multiply" />
-      </div>
+
 
       {/* Konten Utama */}
       <div className="relative z-10">
