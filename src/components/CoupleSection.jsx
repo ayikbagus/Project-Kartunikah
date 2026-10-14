@@ -1,7 +1,7 @@
 export default function CoupleSection() {
   const couple = [
     {
-      name: 'Alexander Bagus Di Lorrenzo',
+      name: 'Bagus Wesley',
       shortName: 'Bagus',
       photo: '/images/cat men.jpg',
       parents: 'Putra dari Bpk. Eko & Ibu Dwi',
