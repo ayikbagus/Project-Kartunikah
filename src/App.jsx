@@ -70,22 +70,9 @@ export default function App() {
             {/* Video Opening Section — inline, permanent hero section */}
             <VideoIntro />
 
-            {/* Hero / Opening */}
-            <section className="pt-16 pb-12 px-6 text-center">
+            {/* Quran Verse */}
+            <section className="py-12 px-6 text-center">
               <div className="animate-on-scroll">
-                <p className="font-jakarta text-xs tracking-[0.3em] uppercase text-champagne mb-4">
-                  The Wedding Of
-                </p>
-                <h1 className="font-cormorant text-5xl md:text-6xl font-bold text-charcoal mb-3 leading-tight">
-                  Bagus <span className="text-champagne">&amp;</span> Dinar
-                </h1>
-                <p className="font-cormorant text-lg text-muted italic">
-                  20 Desember 2026
-                </p>
-              </div>
-
-              {/* Quran Verse */}
-              <div className="mt-10 animate-on-scroll">
                 <div className="w-12 h-px bg-champagne/40 mx-auto mb-6"></div>
                 <p className="quran-verse text-sm text-muted/80 leading-relaxed max-w-xs mx-auto">
                   "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu

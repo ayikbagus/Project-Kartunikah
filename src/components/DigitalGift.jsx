@@ -7,6 +7,7 @@ import { useState } from 'react';
 const BANK_ACCOUNTS = [
   {
     bank: 'Seabank Indonesia',
+    logo: '/images/logos/seabank.svg',
     bankShort: 'SB',
     color: '#FF7518',
     accountNumber: '005001855418',
@@ -14,6 +15,7 @@ const BANK_ACCOUNTS = [
   },
   {
     bank: 'Bank Syariah Indonesia',
+    logo: '/images/logos/bsi.svg',
     bankShort: 'BSI',
     color: '#00A650',
     accountNumber: '9876543210',
@@ -48,19 +50,36 @@ function BankCard({ account }) {
     <div className="rounded-2xl bg-white/60 backdrop-blur-sm border border-champagne/15 shadow-sm overflow-hidden">
       {/* Bank Header */}
       <div
-        className="px-5 py-3 flex items-center gap-3"
+        className="px-5 py-3.5 flex items-center justify-between"
         style={{ background: `${account.color}10` }}
       >
-        <div
-          className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-jakarta text-xs font-bold tracking-wide shadow-sm"
-          style={{ backgroundColor: account.color }}
-        >
-          {account.bankShort}
+        <div className="flex items-center">
+          {account.logo ? (
+            <img
+              src={account.logo}
+              alt={account.bank}
+              className="h-8 max-h-8 w-auto max-w-[130px] object-contain object-left"
+            />
+          ) : (
+            <div className="flex items-center gap-3">
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-jakarta text-xs font-bold tracking-wide shadow-sm"
+                style={{ backgroundColor: account.color }}
+              >
+                {account.bankShort || account.bank.slice(0, 2)}
+              </div>
+              <div>
+                <p className="font-jakarta text-sm font-semibold text-charcoal">{account.bank}</p>
+                <p className="font-jakarta text-[10px] text-muted tracking-wide">Rekening Tabungan</p>
+              </div>
+            </div>
+          )}
         </div>
-        <div>
-          <p className="font-jakarta text-sm font-semibold text-charcoal">{account.bank}</p>
-          <p className="font-jakarta text-[10px] text-muted tracking-wide">Rekening Tabungan</p>
-        </div>
+        {account.logo && (
+          <span className="font-jakarta text-[10px] tracking-wider uppercase text-muted font-medium bg-white/70 px-2.5 py-1 rounded-full border border-champagne/10 shadow-xs">
+            Rekening Tabungan
+          </span>
+        )}
       </div>
 
       {/* Account Details */}
